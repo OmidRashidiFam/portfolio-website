@@ -26,7 +26,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 ::-webkit-scrollbar {
@@ -40,8 +40,7 @@ body {
   line-height: 1.7;
 }
 
-/* =============== general styling =============== */
-
+/*========= general style =============== */
 .container {
   width: var(--container-width-lg);
   margin: 0 auto;
@@ -65,8 +64,8 @@ section {
 
 section>h2,
 section>h5 {
+  color: var(--color-white);
   text-align: center;
-  color: var(--color-light);
 }
 
 section>h2 {
@@ -89,19 +88,14 @@ a:hover {
 
 .btn {
   width: max-content;
+  padding: 0.75rem 1.25rem;
   display: inline-block;
   color: var(--color-primary);
-  padding: 0.75rem 1.2rem;
-  border-radius: 0.4rem;
+  font-size: 1rem;
   border: 1px solid var(--color-primary);
+  border-radius: 0.4rem;
   cursor: pointer;
   transition: var(--transition);
-}
-
-.btn:hover {
-  background: var(--color-white);
-  color: var(--color-bg);
-  border-color: var(--color-bg);
 }
 
 .btn-primary {
@@ -109,15 +103,19 @@ a:hover {
   color: var(--color-bg);
 }
 
+.btn:hover {
+  background: var(--color-white);
+  color: var(--color-bg);
+  border: 1px solid transparent;
+}
+
 img {
-  display: block;
   width: 100%;
+  display: block;
   object-fit: cover;
 }
 
-/* =============== media queries =============== */
-
-/* ===== medium device ===== */
+/* =============== media queies for medium divices =============== */
 @media screen and (max-width: 1024px) {
   .container {
     width: var(--container-width-md);
@@ -128,10 +126,14 @@ img {
   }
 }
 
-/* ===== small device ===== */
-@media screen and (max-width: 1024px) {
+/* =============== media queies for small divices =============== */
+@media screen and (max-width: 600px) {
   .container {
     width: var(--container-width-sm);
+  }
+
+  section {
+    margin-top: 4rem;
   }
 
   section>h2 {
